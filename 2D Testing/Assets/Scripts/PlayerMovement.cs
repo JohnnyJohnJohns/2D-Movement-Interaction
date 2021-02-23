@@ -34,7 +34,6 @@ public class PlayerMovement : MonoBehaviour
         {
             canJump = false;
         }
-
     }
 
     public void Move(InputAction.CallbackContext context)

@@ -188,6 +188,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: d4c2cb5e-08ad-45f6-a6a5-260cfe19e412
     m_ActionName: Gameplay/Move[/Keyboard/a,/Keyboard/d,/Keyboard/leftArrow,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cec58262-ed97-49e7-8abb-4ebde5ea649e
+    m_ActionName: Gameplay/Interact[/Keyboard/e,/DualShock4GamepadHID/buttonEast]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
