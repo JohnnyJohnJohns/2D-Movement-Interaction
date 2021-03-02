@@ -11,6 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/AnimationEventDemo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -78,7 +79,7 @@
       <updated>1614076786682</updated>
       <workItem from="1614076803674" duration="7987000" />
       <workItem from="1614548595202" duration="3138000" />
-      <workItem from="1614685581110" duration="306000" />
+      <workItem from="1614685581110" duration="887000" />
     </task>
     <servers />
   </component>
