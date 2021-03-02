@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2452514711012934866}
   - component: {fileID: 6903275750900411152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,8 @@ GameObject:
   - component: {fileID: -2920224205362742731}
   - component: {fileID: -5126160736943850040}
   - component: {fileID: 115031610}
-  m_Layer: 0
+  - component: {fileID: 1353208309}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,6 +193,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: cec58262-ed97-49e7-8abb-4ebde5ea649e
     m_ActionName: Gameplay/Interact[/Keyboard/e,/DualShock4GamepadHID/buttonEast]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1353208309}
+        m_TargetAssemblyTypeName: Shooting, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 063a22f5-2bca-4120-bc14-3b1adf8790b1
+    m_ActionName: Gameplay/Shoot[/DualShock4GamepadHID/rightTrigger]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -211,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 100
   maxSpeed: 50
-  jumpForce: 0
+  jumpForce: 40
   groundCheck: {fileID: 6903275750900411152}
   groundLayers:
     serializedVersion: 2
@@ -232,6 +249,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1353208309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7187824048486514024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d008029a035a23458addd9a1d4cd3ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 6235823758472353550, guid: bdbfd5956767ceb40848645389672c99, type: 3}
 --- !u!1 &7187824048611682746
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7187824048611682749}
   - component: {fileID: 7187824048611682748}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
