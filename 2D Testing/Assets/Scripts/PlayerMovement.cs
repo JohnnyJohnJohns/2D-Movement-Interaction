@@ -43,10 +43,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (canJump)
+        if (canJump && context.started)
         {
             myRB.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             canJump = false;
+        }
+
+        if (context.canceled && myRB.velocity.y > 0)
+        {
+            myRB.velocity = new Vector2(myRB.velocity.x, 0f);
         }
     }
     
