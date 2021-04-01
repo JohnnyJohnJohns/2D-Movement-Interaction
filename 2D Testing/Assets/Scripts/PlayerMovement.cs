@@ -11,14 +11,26 @@ public class PlayerMovement : MonoBehaviour
     private float moveDir;
     private Rigidbody2D myRB;
     private bool canJump;
+    private SpriteRenderer mySprite;
 
     private void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
+        mySprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void FixedUpdate()
     {
+        if (moveDir > 0)
+        {
+            mySprite.flipX = false;
+        }
+        
+        if (moveDir < 0)
+        {
+            mySprite.flipX = true;
+        }
+        
         var moveAxis = Vector2.right * moveDir;
 
         if (Mathf.Abs(myRB.velocity.x) < maxSpeed)
@@ -39,6 +51,11 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         moveDir = context.ReadValue<float>();
+    }
+    
+    public void Move(float moveAmt)
+    {
+        moveDir = moveAmt;
     }
 
     public void Jump(InputAction.CallbackContext context)
